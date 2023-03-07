@@ -61,16 +61,10 @@ dojo = {
     'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
-def printInfo(dojo):
-    location_counter = len(dojo['locations'])
-    instructor_count = len(dojo['instructors'])
-
-    print(f"{location_counter} LOCATIONS")
-    for location in dojo['locations']:
-        print(location)
-
-    print(f"{instructor_count} INSTRUCTORS")
-    for instructor in dojo['instructors']:
-        print(instructor)
+def printInfo(dictionary):
+    for key, value in dictionary.items():
+        print(len(value), key.upper())
+        for value in value:
+            print(value)
 
 printInfo(dojo)
